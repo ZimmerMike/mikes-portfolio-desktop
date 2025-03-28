@@ -1,0 +1,16 @@
+# Ignore bin and obj folders
+bin/
+obj/
+
+# VS config
+.vscode/
+*.user
+*.suo
+
+# Build artifacts
+*.exe
+*.dll
+
+# Others
+*.log
+*.vs
