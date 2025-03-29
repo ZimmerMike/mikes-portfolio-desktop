@@ -1,27 +1,39 @@
-﻿using MongoDB.Driver;
+using MongoDB.Driver;
+using System;
+using System.Configuration;
+using System.Windows.Forms;
 
-public class MongoService
+namespace MyPortfolioDesktopApp.Services
 {
-    private readonly IMongoCollection<Project> _projects;
-
-    public MongoService()
+    public class MongoService
     {
-        var connectionString = "mongodb+srv://angelmetalhj:zWzyI4BWLK0nMADe@portfolio.gtluj19.mongodb.net";
-        var client = new MongoClient(connectionString);
-        var database = client.GetDatabase("portfolio");
+        private const string ConnectionName = "MongoDBURI";
+        private readonly IMongoDatabase? _database;
 
-        _projects = database.GetCollection<Project>("projects");
+        public MongoService()
+        {
+            try
+            {
+                var connectionString = ConfigurationManager.ConnectionStrings[ConnectionName]?.ConnectionString;
+
+                if (string.IsNullOrEmpty(connectionString))
+                    throw new ConfigurationErrorsException($"No se encontró la cadena de conexión '{ConnectionName}' en App.config.");
+
+                var client = new MongoClient(connectionString);
+                _database = client.GetDatabase("portfolio");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error en MongoService: " + ex.Message, "Error de conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public IMongoCollection<T> GetCollection<T>(string collectionName)
+        {
+            if (_database == null)
+                throw new Exception("No se pudo inicializar la base de datos.");
+
+            return _database.GetCollection<T>(collectionName);
+        }
     }
-
-    public List<Project> GetAllProjects() =>
-        _projects.Find(p => true).ToList();
-
-    public void InsertProject(Project project) =>
-        _projects.InsertOne(project);
-
-    public void UpdateProject(Project project) =>
-        _projects.ReplaceOne(p => p.Id == project.Id, project);
-
-    public void DeleteProject(string id) =>
-        _projects.DeleteOne(p => p.Id == id);
 }

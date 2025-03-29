@@ -8,10 +8,22 @@ namespace MyPortfolioDesktopApp
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
-            ApplicationConfiguration.Initialize();
-            Application.Run(new MainForm());
+            Application.SetHighDpiMode(HighDpiMode.SystemAware);
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+
+            // Mostrar LoginForm primero
+            var loginForm = new LoginForm(); // o LoginFormFix si usaste ese nombre
+            if (loginForm.ShowDialog() == DialogResult.OK)
+            {
+                // Si el login fue exitoso, abrir MainForm
+                Application.Run(new MainForm()); // asegúrate que sea tu form principal
+            }
+            else
+            {
+                // Si cierra o falla login, salir de la app
+                Application.Exit();
+            }
         }
     }
 }
