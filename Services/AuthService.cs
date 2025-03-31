@@ -11,32 +11,21 @@ namespace MyPortfolioDesktopApp.Services
 
         public AuthService()
         {
-            try
-            {
-                var mongo = new MongoService();
-                _users = mongo.GetCollection<User>("users");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error en AuthService: " + ex.Message);
-            }
+            var mongo = new MongoService();
+            _users = mongo.GetCollection<User>("users");
         }
 
-        public bool Register(string email, string password, out string message)
+        public bool Register(User user, out string message)
         {
-            var existing = _users.Find(u => u.Email == email).FirstOrDefault();
+            var existing = _users.Find(u => u.Email == user.Email).FirstOrDefault();
             if (existing != null)
             {
                 message = "El correo ya está registrado.";
                 return false;
             }
 
-            var user = new User
-            {
-                Email = email,
-                PasswordHash = BCrypt.Net.BCrypt.HashPassword(password),
-                CreatedAt = DateTime.UtcNow
-            };
+            user.PasswordHash = BCrypt.Net.BCrypt.HashPassword(user.PasswordHash);
+            user.CreatedAt = DateTime.UtcNow;
 
             _users.InsertOne(user);
             message = "Registro exitoso.";
@@ -62,6 +51,19 @@ namespace MyPortfolioDesktopApp.Services
 
             message = "Inicio de sesión exitoso.";
             return true;
+        }
+
+        public User? GetUserById(string userId)
+        {
+            try
+            {
+                return _users.Find(u => u.Id == userId).FirstOrDefault();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al obtener usuario por ID: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
         }
     }
 }
