@@ -10,6 +10,7 @@ namespace MyPortfolioDesktopApp
         public LoginForm()
         {
             InitializeComponent();
+            this.Shown += LoginForm_Shown;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -72,5 +73,33 @@ namespace MyPortfolioDesktopApp
             }
         }
 
+        private void doLoginByPressEnter(KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true; // evita el beep
+                btnLogin.PerformClick();
+            }
+        }
+
+        private void txtLoginEmail_KeyDown(object sender, KeyEventArgs e)
+        {
+            doLoginByPressEnter(e);
+        }
+
+        private void txtLoginPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            doLoginByPressEnter(e);
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+            txtLoginEmail.Focus();
+        }
+
+        private void LoginForm_Shown(object sender, EventArgs e)
+        {
+            txtLoginEmail.Focus();
+        }
     }
 }

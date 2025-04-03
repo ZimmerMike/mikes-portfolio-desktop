@@ -105,6 +105,7 @@
             txtLoginEmail.PlaceholderText = "Correo electrónico";
             txtLoginEmail.Size = new Size(300, 27);
             txtLoginEmail.TabIndex = 5;
+            txtLoginEmail.KeyDown += txtLoginEmail_KeyDown;
             // 
             // label2
             // 
@@ -137,6 +138,7 @@
             txtLoginPassword.Size = new Size(300, 27);
             txtLoginPassword.TabIndex = 8;
             txtLoginPassword.UseSystemPasswordChar = true;
+            txtLoginPassword.KeyDown += txtLoginPassword_KeyDown;
             // 
             // tabRegister
             // 

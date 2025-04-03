@@ -1,60 +1,36 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
-using System.Collections.Generic;
 
-public class AboutMe
+namespace MyPortfolioDesktopApp.Models
 {
-    [BsonId]
-    [BsonRepresentation(BsonType.ObjectId)]
-    public string? Id { get; set; }
-
-    [BsonElement("summary")]
-    public string Summary { get; set; }
-
-    [BsonElement("interests")]
-    public List<string> Interests { get; set; }
-
-    [BsonElement("technologies")]
-    public List<Technology> Technologies { get; set; }
-
-    [BsonElement("languages")]
-    public List<Language> Languages { get; set; }
-
-    [BsonElement("contact")]
-    public ContactInfo Contact { get; set; }
-
-    public AboutMe()
+    public class AboutMe
     {
-        Interests = new List<string>();
-        Technologies = new List<Technology>();
-        Languages = new List<Language>();
-        Contact = new ContactInfo();
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string? Id { get; set; }
+
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string UserId { get; set; } = string.Empty;
+
+        public string Summary { get; set; } = string.Empty;
+
+        public List<string> Interests { get; set; } = new();
+
+        public List<Language> Languages { get; set; } = new();
+
+        public ContactInfo Contact { get; set; } = new();
     }
-}
 
-public class KnownTechnology
-{
-    public string TechnologyId { get; set; }
-    public int Years { get; set; }
-}
+    public class Language
+    {
+        public string Name { get; set; } = string.Empty;
+        public string Level { get; set; } = string.Empty;
+    }
 
-public class Language
-{
-    [BsonElement("name")]
-    public string Name { get; set; }
-
-    [BsonElement("level")]
-    public string Level { get; set; }
-}
-
-public class ContactInfo
-{
-    [BsonElement("email")]
-    public string Email { get; set; }
-
-    [BsonElement("phone")]
-    public string Phone { get; set; }
-
-    [BsonElement("scheduleLink")]
-    public string? ScheduleLink { get; set; }
+    public class ContactInfo
+    {
+        public string Email { get; set; } = string.Empty;
+        public string Phone { get; set; } = string.Empty;
+        public string MeetingLink { get; set; } = string.Empty;
+    }
 }

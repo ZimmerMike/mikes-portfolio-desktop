@@ -1,6 +1,6 @@
 ﻿namespace MyPortfolioDesktopApp.UserControls
 {
-    partial class AboutMe
+    partial class AboutMeControl
     {
         /// <summary> 
         /// Variable del diseñador necesaria.
@@ -29,32 +29,32 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            textBox1 = new TextBox();
+            txtResumen = new TextBox();
             label2 = new Label();
-            textBox2 = new TextBox();
-            listBox1 = new ListBox();
-            button1 = new Button();
-            SaveButton = new Button();
-            dataGridView2 = new DataGridView();
+            txtNuevoInteres = new TextBox();
+            lstIntereses = new ListBox();
+            btnAgregarInteres = new Button();
+            btnGuardar = new Button();
+            dgvIdiomas = new DataGridView();
             LanguageColumn = new DataGridViewTextBoxColumn();
             LevelColumn = new DataGridViewTextBoxColumn();
-            textBox3 = new TextBox();
+            txtCorreo = new TextBox();
             label9 = new Label();
             label8 = new Label();
             label7 = new Label();
             groupBox1 = new GroupBox();
-            textBox5 = new TextBox();
-            textBox4 = new TextBox();
+            txtReunion = new TextBox();
+            txtTelefono = new TextBox();
             groupBox2 = new GroupBox();
-            dataGridView1 = new DataGridView();
-            TechColumn = new DataGridViewTextBoxColumn();
+            dgvHabilidades = new DataGridView();
+            SkillColumn = new DataGridViewTextBoxColumn();
             ExperienceColumn = new DataGridViewTextBoxColumn();
             groupBox3 = new GroupBox();
             groupBox4 = new GroupBox();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvIdiomas).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvHabilidades).BeginInit();
             groupBox3.SuspendLayout();
             groupBox4.SuspendLayout();
             SuspendLayout();
@@ -70,13 +70,13 @@
             label1.Text = "Sobre Mí";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // txtResumen
             // 
-            textBox1.Location = new Point(28, 98);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(405, 81);
-            textBox1.TabIndex = 1;
+            txtResumen.Location = new Point(28, 98);
+            txtResumen.Multiline = true;
+            txtResumen.Name = "txtResumen";
+            txtResumen.Size = new Size(405, 81);
+            txtResumen.TabIndex = 1;
             // 
             // label2
             // 
@@ -87,55 +87,57 @@
             label2.TabIndex = 2;
             label2.Text = "Resumen de Trayectoria";
             // 
-            // textBox2
+            // txtNuevoInteres
             // 
-            textBox2.Location = new Point(6, 24);
-            textBox2.Name = "textBox2";
-            textBox2.PlaceholderText = "Agrega un interes";
-            textBox2.Size = new Size(347, 27);
-            textBox2.TabIndex = 4;
+            txtNuevoInteres.Location = new Point(6, 24);
+            txtNuevoInteres.Name = "txtNuevoInteres";
+            txtNuevoInteres.PlaceholderText = "Agrega un interes";
+            txtNuevoInteres.Size = new Size(347, 27);
+            txtNuevoInteres.TabIndex = 4;
             // 
-            // listBox1
+            // lstIntereses
             // 
-            listBox1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            listBox1.FormattingEnabled = true;
-            listBox1.Location = new Point(6, 57);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(390, 84);
-            listBox1.TabIndex = 5;
+            lstIntereses.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            lstIntereses.FormattingEnabled = true;
+            lstIntereses.Location = new Point(6, 57);
+            lstIntereses.Name = "lstIntereses";
+            lstIntereses.Size = new Size(390, 84);
+            lstIntereses.TabIndex = 5;
             // 
-            // button1
+            // btnAgregarInteres
             // 
-            button1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button1.Location = new Point(359, 24);
-            button1.Name = "button1";
-            button1.Size = new Size(40, 27);
-            button1.TabIndex = 6;
-            button1.Text = "+";
-            button1.UseVisualStyleBackColor = true;
+            btnAgregarInteres.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnAgregarInteres.Location = new Point(359, 24);
+            btnAgregarInteres.Name = "btnAgregarInteres";
+            btnAgregarInteres.Size = new Size(40, 27);
+            btnAgregarInteres.TabIndex = 6;
+            btnAgregarInteres.Text = "+";
+            btnAgregarInteres.UseVisualStyleBackColor = true;
+            btnAgregarInteres.Click += btnAgregarInteres_Click;
             // 
-            // SaveButton
+            // btnGuardar
             // 
-            SaveButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            SaveButton.Location = new Point(801, 616);
-            SaveButton.Name = "SaveButton";
-            SaveButton.Size = new Size(167, 42);
-            SaveButton.TabIndex = 9;
-            SaveButton.Text = "Guardar cambios";
-            SaveButton.UseVisualStyleBackColor = true;
+            btnGuardar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnGuardar.Location = new Point(801, 616);
+            btnGuardar.Name = "btnGuardar";
+            btnGuardar.Size = new Size(167, 42);
+            btnGuardar.TabIndex = 9;
+            btnGuardar.Text = "Guardar cambios";
+            btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.Click += btnGuardar_Click;
             // 
-            // dataGridView2
+            // dgvIdiomas
             // 
-            dataGridView2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Columns.AddRange(new DataGridViewColumn[] { LanguageColumn, LevelColumn });
-            dataGridView2.Location = new Point(6, 26);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.RowHeadersVisible = false;
-            dataGridView2.RowHeadersWidth = 51;
-            dataGridView2.Size = new Size(412, 172);
-            dataGridView2.TabIndex = 11;
+            dgvIdiomas.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgvIdiomas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvIdiomas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvIdiomas.Columns.AddRange(new DataGridViewColumn[] { LanguageColumn, LevelColumn });
+            dgvIdiomas.Location = new Point(6, 26);
+            dgvIdiomas.Name = "dgvIdiomas";
+            dgvIdiomas.RowHeadersVisible = false;
+            dgvIdiomas.RowHeadersWidth = 51;
+            dgvIdiomas.Size = new Size(412, 172);
+            dgvIdiomas.TabIndex = 11;
             // 
             // LanguageColumn
             // 
@@ -149,13 +151,13 @@
             LevelColumn.MinimumWidth = 6;
             LevelColumn.Name = "LevelColumn";
             // 
-            // textBox3
+            // txtCorreo
             // 
-            textBox3.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            textBox3.Location = new Point(108, 41);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(287, 27);
-            textBox3.TabIndex = 13;
+            txtCorreo.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            txtCorreo.Location = new Point(108, 41);
+            txtCorreo.Name = "txtCorreo";
+            txtCorreo.Size = new Size(287, 27);
+            txtCorreo.TabIndex = 13;
             // 
             // label9
             // 
@@ -190,9 +192,9 @@
             // groupBox1
             // 
             groupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            groupBox1.Controls.Add(textBox5);
-            groupBox1.Controls.Add(textBox4);
-            groupBox1.Controls.Add(textBox3);
+            groupBox1.Controls.Add(txtReunion);
+            groupBox1.Controls.Add(txtTelefono);
+            groupBox1.Controls.Add(txtCorreo);
             groupBox1.Controls.Add(label9);
             groupBox1.Controls.Add(label8);
             groupBox1.Controls.Add(label7);
@@ -203,49 +205,49 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Datos de Contacto";
             // 
-            // textBox5
+            // txtReunion
             // 
-            textBox5.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            textBox5.Location = new Point(108, 124);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(287, 27);
-            textBox5.TabIndex = 18;
+            txtReunion.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            txtReunion.Location = new Point(108, 124);
+            txtReunion.Name = "txtReunion";
+            txtReunion.Size = new Size(287, 27);
+            txtReunion.TabIndex = 18;
             // 
-            // textBox4
+            // txtTelefono
             // 
-            textBox4.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            textBox4.Location = new Point(108, 82);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(287, 27);
-            textBox4.TabIndex = 17;
+            txtTelefono.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            txtTelefono.Location = new Point(108, 82);
+            txtTelefono.Name = "txtTelefono";
+            txtTelefono.Size = new Size(287, 27);
+            txtTelefono.TabIndex = 17;
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(dataGridView1);
+            groupBox2.Controls.Add(dgvHabilidades);
             groupBox2.Location = new Point(28, 361);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(405, 204);
             groupBox2.TabIndex = 18;
             groupBox2.TabStop = false;
-            groupBox2.Text = "Tecnologías";
+            groupBox2.Text = "Habilidades";
             // 
-            // dataGridView1
+            // dgvHabilidades
             // 
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { TechColumn, ExperienceColumn });
-            dataGridView1.Location = new Point(6, 26);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersVisible = false;
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(390, 172);
-            dataGridView1.TabIndex = 0;
+            dgvHabilidades.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvHabilidades.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvHabilidades.Columns.AddRange(new DataGridViewColumn[] { SkillColumn, ExperienceColumn });
+            dgvHabilidades.Location = new Point(6, 26);
+            dgvHabilidades.Name = "dgvHabilidades";
+            dgvHabilidades.RowHeadersVisible = false;
+            dgvHabilidades.RowHeadersWidth = 51;
+            dgvHabilidades.Size = new Size(390, 172);
+            dgvHabilidades.TabIndex = 0;
             // 
-            // TechColumn
+            // SkillColumn
             // 
-            TechColumn.HeaderText = "Tecnología";
-            TechColumn.MinimumWidth = 6;
-            TechColumn.Name = "TechColumn";
+            SkillColumn.HeaderText = "Habilidad";
+            SkillColumn.MinimumWidth = 6;
+            SkillColumn.Name = "SkillColumn";
             // 
             // ExperienceColumn
             // 
@@ -255,9 +257,9 @@
             // 
             // groupBox3
             // 
-            groupBox3.Controls.Add(listBox1);
-            groupBox3.Controls.Add(textBox2);
-            groupBox3.Controls.Add(button1);
+            groupBox3.Controls.Add(lstIntereses);
+            groupBox3.Controls.Add(txtNuevoInteres);
+            groupBox3.Controls.Add(btnAgregarInteres);
             groupBox3.Location = new Point(28, 190);
             groupBox3.Name = "groupBox3";
             groupBox3.Size = new Size(405, 164);
@@ -268,7 +270,7 @@
             // groupBox4
             // 
             groupBox4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            groupBox4.Controls.Add(dataGridView2);
+            groupBox4.Controls.Add(dgvIdiomas);
             groupBox4.Location = new Point(520, 75);
             groupBox4.Name = "groupBox4";
             groupBox4.Size = new Size(424, 204);
@@ -276,7 +278,7 @@
             groupBox4.TabStop = false;
             groupBox4.Text = "Idiomas";
             // 
-            // AboutMe
+            // AboutMeControl
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -284,17 +286,18 @@
             Controls.Add(groupBox3);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
-            Controls.Add(SaveButton);
+            Controls.Add(btnGuardar);
             Controls.Add(label2);
-            Controls.Add(textBox1);
+            Controls.Add(txtResumen);
             Controls.Add(label1);
-            Name = "AboutMe";
+            Name = "AboutMeControl";
             Size = new Size(971, 661);
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            Load += AboutMeControl_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvIdiomas).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvHabilidades).EndInit();
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
             groupBox4.ResumeLayout(false);
@@ -305,27 +308,27 @@
         #endregion
 
         private Label label1;
-        private TextBox textBox1;
+        private TextBox txtResumen;
         private Label label2;
-        private TextBox textBox2;
-        private ListBox listBox1;
-        private Button button1;
-        private Button SaveButton;
-        private DataGridView dataGridView2;
+        private TextBox txtNuevoInteres;
+        private ListBox lstIntereses;
+        private Button btnAgregarInteres;
+        private Button btnGuardar;
+        private DataGridView dgvIdiomas;
         private DataGridViewTextBoxColumn LanguageColumn;
         private DataGridViewTextBoxColumn LevelColumn;
-        private TextBox textBox3;
+        private TextBox txtCorreo;
         private Label label9;
         private Label label8;
         private Label label7;
         private GroupBox groupBox1;
-        private TextBox textBox5;
-        private TextBox textBox4;
+        private TextBox txtReunion;
+        private TextBox txtTelefono;
         private GroupBox groupBox2;
         private GroupBox groupBox3;
         private GroupBox groupBox4;
-        private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn TechColumn;
+        private DataGridView dgvHabilidades;
+        private DataGridViewTextBoxColumn SkillColumn;
         private DataGridViewTextBoxColumn ExperienceColumn;
     }
 }

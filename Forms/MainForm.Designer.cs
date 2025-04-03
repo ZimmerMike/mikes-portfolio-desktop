@@ -31,8 +31,9 @@
             panel1 = new Panel();
             tabControlMain = new TabControl();
             DashboardTab = new TabPage();
+            dashboard2 = new MyPortfolioDesktopApp.UserControls.Dashboard();
             AboutTab = new TabPage();
-            aboutMe1 = new MyPortfolioDesktopApp.UserControls.AboutMe();
+            aboutMeControl1 = new MyPortfolioDesktopApp.UserControls.AboutMeControl();
             ProyectsTab = new TabPage();
             projects1 = new MyPortfolioDesktopApp.UserControls.Projects();
             ExperienceTab = new TabPage();
@@ -41,7 +42,6 @@
             education1 = new MyPortfolioDesktopApp.UserControls.Education();
             CertificationsTab = new TabPage();
             certifications1 = new MyPortfolioDesktopApp.UserControls.Certifications();
-            dashboard2 = new MyPortfolioDesktopApp.UserControls.Dashboard();
             tabControlMain.SuspendLayout();
             DashboardTab.SuspendLayout();
             AboutTab.SuspendLayout();
@@ -86,24 +86,32 @@
             DashboardTab.Text = "📊 Dashboard";
             DashboardTab.UseVisualStyleBackColor = true;
             // 
+            // dashboard2
+            // 
+            dashboard2.Dock = DockStyle.Fill;
+            dashboard2.Location = new Point(0, 0);
+            dashboard2.Name = "dashboard2";
+            dashboard2.Size = new Size(1001, 658);
+            dashboard2.TabIndex = 0;
+            // 
             // AboutTab
             // 
-            AboutTab.Controls.Add(aboutMe1);
-            AboutTab.Location = new Point(4, 60);
+            AboutTab.Controls.Add(aboutMeControl1);
+            AboutTab.Location = new Point(4, 32);
             AboutTab.Name = "AboutTab";
             AboutTab.Padding = new Padding(3);
-            AboutTab.Size = new Size(192, 36);
+            AboutTab.Size = new Size(1001, 658);
             AboutTab.TabIndex = 0;
             AboutTab.Text = "👤 Sobre Mí";
             AboutTab.UseVisualStyleBackColor = true;
             // 
-            // aboutMe1
+            // aboutMeControl1
             // 
-            aboutMe1.Dock = DockStyle.Fill;
-            aboutMe1.Location = new Point(3, 3);
-            aboutMe1.Name = "aboutMe1";
-            aboutMe1.Size = new Size(186, 30);
-            aboutMe1.TabIndex = 0;
+            aboutMeControl1.Dock = DockStyle.Fill;
+            aboutMeControl1.Location = new Point(3, 3);
+            aboutMeControl1.Name = "aboutMeControl1";
+            aboutMeControl1.Size = new Size(995, 652);
+            aboutMeControl1.TabIndex = 0;
             // 
             // ProyectsTab
             // 
@@ -178,14 +186,6 @@
             certifications1.Size = new Size(192, 0);
             certifications1.TabIndex = 0;
             // 
-            // dashboard2
-            // 
-            dashboard2.Dock = DockStyle.Fill;
-            dashboard2.Location = new Point(0, 0);
-            dashboard2.Name = "dashboard2";
-            dashboard2.Size = new Size(1001, 658);
-            dashboard2.TabIndex = 0;
-            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -218,12 +218,13 @@
         private TabPage EducationTab;
         private TabPage CertificationsTab;
         private TabPage DashboardTab;
-        private UserControls.AboutMe aboutMe1;
+        private UserControls.AboutMeControl aboutMe1;
         private UserControls.Experience experience1;
         private UserControls.Education education1;
         private UserControls.Certifications certifications1;
         private UserControls.Dashboard dashboard1;
         private UserControls.Projects projects1;
         private UserControls.Dashboard dashboard2;
+        private UserControls.AboutMeControl aboutMeControl1;
     }
 }

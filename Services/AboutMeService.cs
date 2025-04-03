@@ -1,5 +1,5 @@
 using MongoDB.Driver;
-using System.Linq;
+using MyPortfolioDesktopApp.Models;
 
 namespace MyPortfolioDesktopApp.Services
 {
@@ -10,25 +10,25 @@ namespace MyPortfolioDesktopApp.Services
         public AboutMeService()
         {
             var mongo = new MongoService();
-            _collection = mongo.GetCollection<AboutMe>("aboutMe");
+            _collection = mongo.GetCollection<AboutMe>("aboutme");
         }
 
-        public AboutMe? GetAboutMe()
+        public AboutMe? GetByUserId(string userId)
         {
-            return _collection.Find(_ => true).FirstOrDefault();
+            return _collection.Find(a => a.UserId == userId).FirstOrDefault();
         }
 
-        public void SaveAboutMe(AboutMe aboutMe)
+        public void SaveOrUpdate(AboutMe data)
         {
-            var existing = GetAboutMe();
-            if (existing != null && !string.IsNullOrEmpty(existing.Id))
+            var existing = GetByUserId(data.UserId);
+            if (existing == null)
             {
-                aboutMe.Id = existing.Id;
-                _collection.ReplaceOne(a => a.Id == aboutMe.Id, aboutMe);
+                _collection.InsertOne(data);
             }
             else
             {
-                _collection.InsertOne(aboutMe);
+                data.Id = existing.Id;
+                _collection.ReplaceOne(a => a.Id == existing.Id, data);
             }
         }
     }
