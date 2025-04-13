@@ -15,6 +15,10 @@ namespace MyPortfolioDesktopApp.Models
         public string Name { get; set; } = string.Empty;
 
         public int ExperienceYears { get; set; }
+        public override string ToString()
+        {
+            return $"{Name} ({ExperienceYears} año{(ExperienceYears != 1 ? "s" : "")})";
+        }
     }
 
 }
