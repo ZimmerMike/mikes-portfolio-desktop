@@ -102,7 +102,7 @@ namespace MyPortfolioDesktopApp.UserControls
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(50, 68);
+            label1.Location = new Point(50, 62);
             label1.Name = "label1";
             label1.Size = new Size(135, 20);
             label1.TabIndex = 3;
@@ -110,10 +110,10 @@ namespace MyPortfolioDesktopApp.UserControls
             // 
             // txtTitle
             // 
-            txtTitle.Location = new Point(50, 91);
+            txtTitle.Location = new Point(50, 85);
             txtTitle.Name = "txtTitle";
             txtTitle.PlaceholderText = "Título del proyecto";
-            txtTitle.Size = new Size(300, 27);
+            txtTitle.Size = new Size(350, 27);
             txtTitle.TabIndex = 4;
             // 
             // label2
@@ -131,13 +131,14 @@ namespace MyPortfolioDesktopApp.UserControls
             txtDescription.Multiline = true;
             txtDescription.Name = "txtDescription";
             txtDescription.PlaceholderText = "Descripción";
-            txtDescription.Size = new Size(300, 100);
+            txtDescription.ScrollBars = ScrollBars.Vertical;
+            txtDescription.Size = new Size(350, 200);
             txtDescription.TabIndex = 6;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(50, 247);
+            label3.Location = new Point(425, 496);
             label3.Name = "label3";
             label3.Size = new Size(137, 20);
             label3.TabIndex = 7;
@@ -145,16 +146,16 @@ namespace MyPortfolioDesktopApp.UserControls
             // 
             // txtRepoUrl
             // 
-            txtRepoUrl.Location = new Point(50, 270);
+            txtRepoUrl.Location = new Point(425, 519);
             txtRepoUrl.Name = "txtRepoUrl";
             txtRepoUrl.PlaceholderText = "URL del repositorio";
-            txtRepoUrl.Size = new Size(300, 27);
+            txtRepoUrl.Size = new Size(500, 27);
             txtRepoUrl.TabIndex = 8;
             // 
             // txt
             // 
             txt.AutoSize = true;
-            txt.Location = new Point(50, 300);
+            txt.Location = new Point(425, 549);
             txt.Name = "txt";
             txt.Size = new Size(92, 20);
             txt.TabIndex = 9;
@@ -162,10 +163,10 @@ namespace MyPortfolioDesktopApp.UserControls
             // 
             // txtLiveUrl
             // 
-            txtLiveUrl.Location = new Point(50, 323);
+            txtLiveUrl.Location = new Point(425, 572);
             txtLiveUrl.Name = "txtLiveUrl";
             txtLiveUrl.PlaceholderText = "URL del sitio";
-            txtLiveUrl.Size = new Size(300, 27);
+            txtLiveUrl.Size = new Size(500, 27);
             txtLiveUrl.TabIndex = 10;
             // 
             // label4
@@ -183,13 +184,13 @@ namespace MyPortfolioDesktopApp.UserControls
             clbSkills.FormattingEnabled = true;
             clbSkills.Location = new Point(50, 376);
             clbSkills.Name = "clbSkills";
-            clbSkills.Size = new Size(300, 224);
+            clbSkills.Size = new Size(350, 224);
             clbSkills.TabIndex = 12;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(425, 68);
+            label5.Location = new Point(425, 62);
             label5.Name = "label5";
             label5.Size = new Size(151, 20);
             label5.TabIndex = 13;
@@ -197,11 +198,14 @@ namespace MyPortfolioDesktopApp.UserControls
             // 
             // dgvProjects
             // 
+            dgvProjects.AllowUserToAddRows = false;
+            dgvProjects.AllowUserToDeleteRows = false;
             dgvProjects.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
             dgvProjects.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvProjects.Columns.AddRange(new DataGridViewColumn[] { id, projectTitle, projectDescription, repoURL, liveURL, skillsApplied });
-            dgvProjects.Location = new Point(425, 91);
+            dgvProjects.Location = new Point(425, 85);
             dgvProjects.Name = "dgvProjects";
+            dgvProjects.ReadOnly = true;
             dgvProjects.RowHeadersVisible = false;
             dgvProjects.RowHeadersWidth = 51;
             dgvProjects.Size = new Size(500, 377);
@@ -213,6 +217,7 @@ namespace MyPortfolioDesktopApp.UserControls
             id.HeaderText = "Id";
             id.MinimumWidth = 6;
             id.Name = "id";
+            id.ReadOnly = true;
             id.Width = 51;
             // 
             // projectTitle
@@ -220,6 +225,7 @@ namespace MyPortfolioDesktopApp.UserControls
             projectTitle.HeaderText = "Título del proyecto";
             projectTitle.MinimumWidth = 6;
             projectTitle.Name = "projectTitle";
+            projectTitle.ReadOnly = true;
             projectTitle.Width = 150;
             // 
             // projectDescription
@@ -227,6 +233,7 @@ namespace MyPortfolioDesktopApp.UserControls
             projectDescription.HeaderText = "Descripción";
             projectDescription.MinimumWidth = 6;
             projectDescription.Name = "projectDescription";
+            projectDescription.ReadOnly = true;
             projectDescription.Width = 116;
             // 
             // repoURL
@@ -234,6 +241,7 @@ namespace MyPortfolioDesktopApp.UserControls
             repoURL.HeaderText = "URL Repositorio";
             repoURL.MinimumWidth = 6;
             repoURL.Name = "repoURL";
+            repoURL.ReadOnly = true;
             repoURL.Width = 133;
             // 
             // liveURL
@@ -241,6 +249,7 @@ namespace MyPortfolioDesktopApp.UserControls
             liveURL.HeaderText = "URL Sitio";
             liveURL.MinimumWidth = 6;
             liveURL.Name = "liveURL";
+            liveURL.ReadOnly = true;
             liveURL.Width = 91;
             // 
             // skillsApplied
@@ -248,6 +257,7 @@ namespace MyPortfolioDesktopApp.UserControls
             skillsApplied.HeaderText = "Habilidades utilizadas";
             skillsApplied.MinimumWidth = 6;
             skillsApplied.Name = "skillsApplied";
+            skillsApplied.ReadOnly = true;
             skillsApplied.Width = 169;
             // 
             // ProjectControl

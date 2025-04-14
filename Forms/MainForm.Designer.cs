@@ -37,7 +37,7 @@
             ProyectsTab = new TabPage();
             projects1 = new MyPortfolioDesktopApp.UserControls.ProjectControl();
             ExperienceTab = new TabPage();
-            experience1 = new MyPortfolioDesktopApp.UserControls.Experience();
+            experience1 = new MyPortfolioDesktopApp.UserControls.WorkExperienceControl();
             EducationTab = new TabPage();
             education1 = new MyPortfolioDesktopApp.UserControls.Education();
             CertificationsTab = new TabPage();
@@ -219,7 +219,7 @@
         private TabPage CertificationsTab;
         private TabPage DashboardTab;
         private UserControls.AboutMeControl aboutMe1;
-        private UserControls.Experience experience1;
+        private UserControls.WorkExperienceControl experience1;
         private UserControls.Education education1;
         private UserControls.Certifications certifications1;
         private UserControls.Dashboard dashboard1;
