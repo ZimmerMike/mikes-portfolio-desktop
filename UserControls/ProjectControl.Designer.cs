@@ -30,7 +30,6 @@ namespace MyPortfolioDesktopApp.UserControls
         private void InitializeComponent()
         {
             Title = new Label();
-            panel1 = new Panel();
             btnDelete = new Button();
             btnSave = new Button();
             label1 = new Label();
@@ -51,7 +50,6 @@ namespace MyPortfolioDesktopApp.UserControls
             repoURL = new DataGridViewTextBoxColumn();
             liveURL = new DataGridViewTextBoxColumn();
             skillsApplied = new DataGridViewTextBoxColumn();
-            panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvProjects).BeginInit();
             SuspendLayout();
             // 
@@ -61,48 +59,40 @@ namespace MyPortfolioDesktopApp.UserControls
             Title.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Title.Location = new Point(0, 0);
             Title.Name = "Title";
-            Title.Size = new Size(971, 40);
+            Title.Size = new Size(1089, 40);
             Title.TabIndex = 0;
             Title.Text = "Proyectos";
             Title.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // panel1
-            // 
-            panel1.Controls.Add(btnDelete);
-            panel1.Controls.Add(btnSave);
-            panel1.Dock = DockStyle.Bottom;
-            panel1.Location = new Point(0, 614);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(971, 47);
-            panel1.TabIndex = 2;
-            // 
             // btnDelete
             // 
-            btnDelete.BackColor = SystemColors.Control;
-            btnDelete.ForeColor = SystemColors.ControlText;
-            btnDelete.Location = new Point(662, 3);
+            btnDelete.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnDelete.BackColor = Color.LightCoral;
+            btnDelete.FlatStyle = FlatStyle.System;
+            btnDelete.ForeColor = Color.White;
+            btnDelete.Location = new Point(835, 383);
             btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(150, 42);
+            btnDelete.Size = new Size(100, 29);
             btnDelete.TabIndex = 1;
-            btnDelete.Text = "Eliminar proyecto";
+            btnDelete.Text = "Eliminar";
             btnDelete.UseVisualStyleBackColor = false;
             btnDelete.Click += btnDelete_Click;
             // 
             // btnSave
             // 
-            btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btnSave.Location = new Point(818, 3);
+            btnSave.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnSave.Location = new Point(941, 383);
             btnSave.Name = "btnSave";
-            btnSave.Size = new Size(150, 42);
+            btnSave.Size = new Size(100, 29);
             btnSave.TabIndex = 0;
-            btnSave.Text = "Guardar cambios";
+            btnSave.Text = "Guardar";
             btnSave.UseVisualStyleBackColor = true;
             btnSave.Click += btnSave_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(50, 62);
+            label1.Location = new Point(49, 72);
             label1.Name = "label1";
             label1.Size = new Size(135, 20);
             label1.TabIndex = 3;
@@ -110,16 +100,16 @@ namespace MyPortfolioDesktopApp.UserControls
             // 
             // txtTitle
             // 
-            txtTitle.Location = new Point(50, 85);
+            txtTitle.Location = new Point(49, 95);
             txtTitle.Name = "txtTitle";
             txtTitle.PlaceholderText = "Título del proyecto";
-            txtTitle.Size = new Size(350, 27);
+            txtTitle.Size = new Size(450, 27);
             txtTitle.TabIndex = 4;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(50, 121);
+            label2.Location = new Point(49, 131);
             label2.Name = "label2";
             label2.Size = new Size(87, 20);
             label2.TabIndex = 5;
@@ -127,18 +117,19 @@ namespace MyPortfolioDesktopApp.UserControls
             // 
             // txtDescription
             // 
-            txtDescription.Location = new Point(50, 144);
+            txtDescription.Location = new Point(49, 154);
             txtDescription.Multiline = true;
             txtDescription.Name = "txtDescription";
             txtDescription.PlaceholderText = "Descripción";
             txtDescription.ScrollBars = ScrollBars.Vertical;
-            txtDescription.Size = new Size(350, 200);
+            txtDescription.Size = new Size(450, 200);
             txtDescription.TabIndex = 6;
             // 
             // label3
             // 
+            label3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label3.AutoSize = true;
-            label3.Location = new Point(425, 496);
+            label3.Location = new Point(591, 72);
             label3.Name = "label3";
             label3.Size = new Size(137, 20);
             label3.TabIndex = 7;
@@ -146,16 +137,18 @@ namespace MyPortfolioDesktopApp.UserControls
             // 
             // txtRepoUrl
             // 
-            txtRepoUrl.Location = new Point(425, 519);
+            txtRepoUrl.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            txtRepoUrl.Location = new Point(591, 95);
             txtRepoUrl.Name = "txtRepoUrl";
             txtRepoUrl.PlaceholderText = "URL del repositorio";
-            txtRepoUrl.Size = new Size(500, 27);
+            txtRepoUrl.Size = new Size(450, 27);
             txtRepoUrl.TabIndex = 8;
             // 
             // txt
             // 
+            txt.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txt.AutoSize = true;
-            txt.Location = new Point(425, 549);
+            txt.Location = new Point(591, 131);
             txt.Name = "txt";
             txt.Size = new Size(92, 20);
             txt.TabIndex = 9;
@@ -163,16 +156,17 @@ namespace MyPortfolioDesktopApp.UserControls
             // 
             // txtLiveUrl
             // 
-            txtLiveUrl.Location = new Point(425, 572);
+            txtLiveUrl.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            txtLiveUrl.Location = new Point(591, 154);
             txtLiveUrl.Name = "txtLiveUrl";
             txtLiveUrl.PlaceholderText = "URL del sitio";
-            txtLiveUrl.Size = new Size(500, 27);
+            txtLiveUrl.Size = new Size(450, 27);
             txtLiveUrl.TabIndex = 10;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(50, 353);
+            label4.Location = new Point(591, 195);
             label4.Name = "label4";
             label4.Size = new Size(156, 20);
             label4.TabIndex = 11;
@@ -182,15 +176,16 @@ namespace MyPortfolioDesktopApp.UserControls
             // 
             clbSkills.CheckOnClick = true;
             clbSkills.FormattingEnabled = true;
-            clbSkills.Location = new Point(50, 376);
+            clbSkills.Location = new Point(591, 218);
             clbSkills.Name = "clbSkills";
-            clbSkills.Size = new Size(350, 224);
+            clbSkills.Size = new Size(450, 136);
             clbSkills.TabIndex = 12;
             // 
             // label5
             // 
+            label5.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label5.AutoSize = true;
-            label5.Location = new Point(425, 62);
+            label5.Location = new Point(48, 387);
             label5.Name = "label5";
             label5.Size = new Size(151, 20);
             label5.TabIndex = 13;
@@ -200,15 +195,16 @@ namespace MyPortfolioDesktopApp.UserControls
             // 
             dgvProjects.AllowUserToAddRows = false;
             dgvProjects.AllowUserToDeleteRows = false;
-            dgvProjects.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            dgvProjects.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            dgvProjects.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvProjects.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvProjects.Columns.AddRange(new DataGridViewColumn[] { id, projectTitle, projectDescription, repoURL, liveURL, skillsApplied });
-            dgvProjects.Location = new Point(425, 85);
+            dgvProjects.Location = new Point(48, 418);
             dgvProjects.Name = "dgvProjects";
             dgvProjects.ReadOnly = true;
             dgvProjects.RowHeadersVisible = false;
             dgvProjects.RowHeadersWidth = 51;
-            dgvProjects.Size = new Size(500, 377);
+            dgvProjects.Size = new Size(993, 300);
             dgvProjects.TabIndex = 14;
             dgvProjects.CellClick += dgvProjects_CellClick;
             // 
@@ -218,7 +214,6 @@ namespace MyPortfolioDesktopApp.UserControls
             id.MinimumWidth = 6;
             id.Name = "id";
             id.ReadOnly = true;
-            id.Width = 51;
             // 
             // projectTitle
             // 
@@ -226,7 +221,6 @@ namespace MyPortfolioDesktopApp.UserControls
             projectTitle.MinimumWidth = 6;
             projectTitle.Name = "projectTitle";
             projectTitle.ReadOnly = true;
-            projectTitle.Width = 150;
             // 
             // projectDescription
             // 
@@ -234,7 +228,6 @@ namespace MyPortfolioDesktopApp.UserControls
             projectDescription.MinimumWidth = 6;
             projectDescription.Name = "projectDescription";
             projectDescription.ReadOnly = true;
-            projectDescription.Width = 116;
             // 
             // repoURL
             // 
@@ -242,7 +235,6 @@ namespace MyPortfolioDesktopApp.UserControls
             repoURL.MinimumWidth = 6;
             repoURL.Name = "repoURL";
             repoURL.ReadOnly = true;
-            repoURL.Width = 133;
             // 
             // liveURL
             // 
@@ -250,7 +242,6 @@ namespace MyPortfolioDesktopApp.UserControls
             liveURL.MinimumWidth = 6;
             liveURL.Name = "liveURL";
             liveURL.ReadOnly = true;
-            liveURL.Width = 91;
             // 
             // skillsApplied
             // 
@@ -258,12 +249,13 @@ namespace MyPortfolioDesktopApp.UserControls
             skillsApplied.MinimumWidth = 6;
             skillsApplied.Name = "skillsApplied";
             skillsApplied.ReadOnly = true;
-            skillsApplied.Width = 169;
             // 
             // ProjectControl
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(btnSave);
+            Controls.Add(btnDelete);
             Controls.Add(dgvProjects);
             Controls.Add(label5);
             Controls.Add(clbSkills);
@@ -276,12 +268,10 @@ namespace MyPortfolioDesktopApp.UserControls
             Controls.Add(label2);
             Controls.Add(txtTitle);
             Controls.Add(label1);
-            Controls.Add(panel1);
             Controls.Add(Title);
             Name = "ProjectControl";
-            Size = new Size(971, 661);
+            Size = new Size(1089, 759);
             Load += ProjectControl_Load;
-            panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvProjects).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -290,7 +280,6 @@ namespace MyPortfolioDesktopApp.UserControls
         #endregion
 
         private Label Title;
-        private Panel panel1;
         private Button btnSave;
         private Label label1;
         private TextBox txtTitle;

@@ -64,16 +64,17 @@
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(971, 40);
+            label1.Size = new Size(1089, 40);
             label1.TabIndex = 0;
             label1.Text = "Experiencia";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // btnSave
             // 
-            btnSave.Location = new Point(99, 398);
+            btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnSave.Location = new Point(43, 403);
             btnSave.Name = "btnSave";
-            btnSave.Size = new Size(100, 27);
+            btnSave.Size = new Size(100, 29);
             btnSave.TabIndex = 0;
             btnSave.Text = "Guardar";
             btnSave.UseVisualStyleBackColor = true;
@@ -168,15 +169,16 @@
             // 
             dgvExperiences.AllowUserToAddRows = false;
             dgvExperiences.AllowUserToDeleteRows = false;
+            dgvExperiences.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvExperiences.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvExperiences.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvExperiences.Columns.AddRange(new DataGridViewColumn[] { id, jobTitle, company, description, startYear, endYear });
-            dgvExperiences.Location = new Point(99, 431);
+            dgvExperiences.Location = new Point(43, 438);
             dgvExperiences.Name = "dgvExperiences";
             dgvExperiences.ReadOnly = true;
             dgvExperiences.RowHeadersVisible = false;
             dgvExperiences.RowHeadersWidth = 51;
-            dgvExperiences.Size = new Size(773, 188);
+            dgvExperiences.Size = new Size(1016, 318);
             dgvExperiences.TabIndex = 13;
             dgvExperiences.CellClick += dgvExperiences_CellClick;
             // 
@@ -224,9 +226,10 @@
             // 
             // btnDelete
             // 
-            btnDelete.Location = new Point(205, 398);
+            btnDelete.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnDelete.Location = new Point(149, 403);
             btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(100, 27);
+            btnDelete.Size = new Size(100, 29);
             btnDelete.TabIndex = 14;
             btnDelete.Text = "Eliminar";
             btnDelete.UseVisualStyleBackColor = true;
@@ -234,9 +237,10 @@
             // 
             // btnClear
             // 
-            btnClear.Location = new Point(311, 398);
+            btnClear.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnClear.Location = new Point(255, 403);
             btnClear.Name = "btnClear";
-            btnClear.Size = new Size(100, 27);
+            btnClear.Size = new Size(100, 29);
             btnClear.TabIndex = 15;
             btnClear.Text = "Limpiar";
             btnClear.UseVisualStyleBackColor = true;
@@ -244,14 +248,15 @@
             // 
             // groupBox1
             // 
+            groupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             groupBox1.Controls.Add(label7);
             groupBox1.Controls.Add(label5);
             groupBox1.Controls.Add(nudStartYear);
             groupBox1.Controls.Add(nudEndYear);
             groupBox1.Controls.Add(chkCurrentlyWorking);
-            groupBox1.Location = new Point(516, 98);
+            groupBox1.Location = new Point(609, 101);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(356, 182);
+            groupBox1.Size = new Size(450, 182);
             groupBox1.TabIndex = 16;
             groupBox1.TabStop = false;
             groupBox1.Text = "Periodo";
@@ -292,7 +297,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "WorkExperienceControl";
-            Size = new Size(971, 661);
+            Size = new Size(1089, 759);
             Load += WorkExperienceControl_Load;
             ((System.ComponentModel.ISupportInitialize)nudStartYear).EndInit();
             ((System.ComponentModel.ISupportInitialize)nudEndYear).EndInit();

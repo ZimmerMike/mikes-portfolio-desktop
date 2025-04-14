@@ -56,7 +56,7 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1009, 694);
+            panel1.Size = new Size(1097, 795);
             panel1.TabIndex = 0;
             // 
             // tabControlMain
@@ -73,7 +73,7 @@
             tabControlMain.Multiline = true;
             tabControlMain.Name = "tabControlMain";
             tabControlMain.SelectedIndex = 0;
-            tabControlMain.Size = new Size(1009, 694);
+            tabControlMain.Size = new Size(1097, 795);
             tabControlMain.TabIndex = 0;
             // 
             // DashboardTab
@@ -81,7 +81,7 @@
             DashboardTab.Controls.Add(dashboard2);
             DashboardTab.Location = new Point(4, 32);
             DashboardTab.Name = "DashboardTab";
-            DashboardTab.Size = new Size(1001, 658);
+            DashboardTab.Size = new Size(1089, 759);
             DashboardTab.TabIndex = 5;
             DashboardTab.Text = "📊 Dashboard";
             DashboardTab.UseVisualStyleBackColor = true;
@@ -91,16 +91,16 @@
             dashboard2.Dock = DockStyle.Fill;
             dashboard2.Location = new Point(0, 0);
             dashboard2.Name = "dashboard2";
-            dashboard2.Size = new Size(1001, 658);
+            dashboard2.Size = new Size(1089, 759);
             dashboard2.TabIndex = 0;
             // 
             // AboutTab
             // 
             AboutTab.Controls.Add(aboutMeControl1);
-            AboutTab.Location = new Point(4, 32);
+            AboutTab.Location = new Point(4, 60);
             AboutTab.Name = "AboutTab";
             AboutTab.Padding = new Padding(3);
-            AboutTab.Size = new Size(1001, 658);
+            AboutTab.Size = new Size(192, 36);
             AboutTab.TabIndex = 0;
             AboutTab.Text = "👤 Sobre Mí";
             AboutTab.UseVisualStyleBackColor = true;
@@ -110,16 +110,16 @@
             aboutMeControl1.Dock = DockStyle.Fill;
             aboutMeControl1.Location = new Point(3, 3);
             aboutMeControl1.Name = "aboutMeControl1";
-            aboutMeControl1.Size = new Size(995, 652);
+            aboutMeControl1.Size = new Size(186, 30);
             aboutMeControl1.TabIndex = 0;
             // 
             // ProyectsTab
             // 
             ProyectsTab.Controls.Add(projects1);
-            ProyectsTab.Location = new Point(4, 88);
+            ProyectsTab.Location = new Point(4, 32);
             ProyectsTab.Name = "ProyectsTab";
             ProyectsTab.Padding = new Padding(3);
-            ProyectsTab.Size = new Size(192, 8);
+            ProyectsTab.Size = new Size(1089, 759);
             ProyectsTab.TabIndex = 1;
             ProyectsTab.Text = "\U0001f9e9 Proyectos";
             ProyectsTab.UseVisualStyleBackColor = true;
@@ -129,7 +129,7 @@
             projects1.Dock = DockStyle.Fill;
             projects1.Location = new Point(3, 3);
             projects1.Name = "projects1";
-            projects1.Size = new Size(186, 2);
+            projects1.Size = new Size(1083, 753);
             projects1.TabIndex = 0;
             // 
             // ExperienceTab
@@ -190,7 +190,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1009, 694);
+            ClientSize = new Size(1097, 795);
             Controls.Add(tabControlMain);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.FixedSingle;

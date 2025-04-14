@@ -374,7 +374,7 @@
             MaximizeBox = false;
             Name = "LoginForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "LoginForm";
+            Text = "Inicio de sesión";
             tabControl.ResumeLayout(false);
             tabLogin.ResumeLayout(false);
             tabLogin.PerformLayout();

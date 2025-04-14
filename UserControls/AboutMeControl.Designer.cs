@@ -65,7 +65,7 @@
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(971, 40);
+            label1.Size = new Size(1089, 40);
             label1.TabIndex = 0;
             label1.Text = "Sobre Mí";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -118,7 +118,7 @@
             // btnGuardar
             // 
             btnGuardar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btnGuardar.Location = new Point(801, 616);
+            btnGuardar.Location = new Point(919, 714);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(167, 42);
             btnGuardar.TabIndex = 9;
@@ -198,7 +198,7 @@
             groupBox1.Controls.Add(label9);
             groupBox1.Controls.Add(label8);
             groupBox1.Controls.Add(label7);
-            groupBox1.Location = new Point(520, 285);
+            groupBox1.Location = new Point(638, 285);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(424, 181);
             groupBox1.TabIndex = 17;
@@ -271,7 +271,7 @@
             // 
             groupBox4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             groupBox4.Controls.Add(dgvIdiomas);
-            groupBox4.Location = new Point(520, 75);
+            groupBox4.Location = new Point(638, 75);
             groupBox4.Name = "groupBox4";
             groupBox4.Size = new Size(424, 204);
             groupBox4.TabIndex = 20;
@@ -291,7 +291,7 @@
             Controls.Add(txtResumen);
             Controls.Add(label1);
             Name = "AboutMeControl";
-            Size = new Size(971, 661);
+            Size = new Size(1089, 759);
             Load += AboutMeControl_Load;
             ((System.ComponentModel.ISupportInitialize)dgvIdiomas).EndInit();
             groupBox1.ResumeLayout(false);
