@@ -39,7 +39,7 @@
             ExperienceTab = new TabPage();
             experience1 = new MyPortfolioDesktopApp.UserControls.WorkExperienceControl();
             EducationTab = new TabPage();
-            education1 = new MyPortfolioDesktopApp.UserControls.Education();
+            education1 = new MyPortfolioDesktopApp.UserControls.EducationControl();
             CertificationsTab = new TabPage();
             certifications1 = new MyPortfolioDesktopApp.UserControls.Certifications();
             tabControlMain.SuspendLayout();
@@ -56,7 +56,7 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1097, 795);
+            panel1.Size = new Size(1215, 909);
             panel1.TabIndex = 0;
             // 
             // tabControlMain
@@ -73,7 +73,7 @@
             tabControlMain.Multiline = true;
             tabControlMain.Name = "tabControlMain";
             tabControlMain.SelectedIndex = 0;
-            tabControlMain.Size = new Size(1097, 795);
+            tabControlMain.Size = new Size(1215, 909);
             tabControlMain.TabIndex = 0;
             // 
             // DashboardTab
@@ -81,7 +81,7 @@
             DashboardTab.Controls.Add(dashboard2);
             DashboardTab.Location = new Point(4, 32);
             DashboardTab.Name = "DashboardTab";
-            DashboardTab.Size = new Size(1089, 759);
+            DashboardTab.Size = new Size(1207, 873);
             DashboardTab.TabIndex = 5;
             DashboardTab.Text = "📊 Dashboard";
             DashboardTab.UseVisualStyleBackColor = true;
@@ -91,7 +91,7 @@
             dashboard2.Dock = DockStyle.Fill;
             dashboard2.Location = new Point(0, 0);
             dashboard2.Name = "dashboard2";
-            dashboard2.Size = new Size(1089, 759);
+            dashboard2.Size = new Size(1207, 873);
             dashboard2.TabIndex = 0;
             // 
             // AboutTab
@@ -116,10 +116,10 @@
             // ProyectsTab
             // 
             ProyectsTab.Controls.Add(projects1);
-            ProyectsTab.Location = new Point(4, 32);
+            ProyectsTab.Location = new Point(4, 88);
             ProyectsTab.Name = "ProyectsTab";
             ProyectsTab.Padding = new Padding(3);
-            ProyectsTab.Size = new Size(1089, 759);
+            ProyectsTab.Size = new Size(192, 8);
             ProyectsTab.TabIndex = 1;
             ProyectsTab.Text = "\U0001f9e9 Proyectos";
             ProyectsTab.UseVisualStyleBackColor = true;
@@ -129,15 +129,15 @@
             projects1.Dock = DockStyle.Fill;
             projects1.Location = new Point(3, 3);
             projects1.Name = "projects1";
-            projects1.Size = new Size(1083, 753);
+            projects1.Size = new Size(186, 2);
             projects1.TabIndex = 0;
             // 
             // ExperienceTab
             // 
             ExperienceTab.Controls.Add(experience1);
-            ExperienceTab.Location = new Point(4, 116);
+            ExperienceTab.Location = new Point(4, 32);
             ExperienceTab.Name = "ExperienceTab";
-            ExperienceTab.Size = new Size(192, 0);
+            ExperienceTab.Size = new Size(1207, 873);
             ExperienceTab.TabIndex = 2;
             ExperienceTab.Text = "\U0001f9f3 Experiencia";
             ExperienceTab.UseVisualStyleBackColor = true;
@@ -147,7 +147,7 @@
             experience1.Dock = DockStyle.Fill;
             experience1.Location = new Point(0, 0);
             experience1.Name = "experience1";
-            experience1.Size = new Size(192, 0);
+            experience1.Size = new Size(1207, 873);
             experience1.TabIndex = 0;
             // 
             // EducationTab
@@ -190,7 +190,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1097, 795);
+            ClientSize = new Size(1215, 909);
             Controls.Add(tabControlMain);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -220,7 +220,7 @@
         private TabPage DashboardTab;
         private UserControls.AboutMeControl aboutMe1;
         private UserControls.WorkExperienceControl experience1;
-        private UserControls.Education education1;
+        private UserControls.EducationControl education1;
         private UserControls.Certifications certifications1;
         private UserControls.Dashboard dashboard1;
         private UserControls.ProjectControl projects1;

@@ -7,7 +7,7 @@ namespace MyPortfolioDesktopApp.UserControls
 {
     public partial class WorkExperienceControl : UserControl
     {
-        private WorkExperienceService? _service;
+        private WorkExperienceService? _experienceService;
         private string? _editingId;
 
         public WorkExperienceControl()
@@ -26,10 +26,10 @@ namespace MyPortfolioDesktopApp.UserControls
         {
             if (DesignMode || LicenseManager.UsageMode == LicenseUsageMode.Designtime) return;
 
-            _service = new WorkExperienceService();
+            _experienceService = new WorkExperienceService();
             dgvExperiences.Rows.Clear();
 
-            var experiencias = _service.GetByUserId(Session.UserId);
+            var experiencias = _experienceService.GetByUserId(Session.UserId);
             foreach (var exp in experiencias)
             {
                 dgvExperiences.Rows.Add(exp.Id, exp.JobTitle, exp.Company, exp.Description, exp.StartYear, exp.EndYear);
@@ -59,7 +59,7 @@ namespace MyPortfolioDesktopApp.UserControls
                 EndYear = endYear
             };
 
-            _service!.SaveOrUpdate(experiencia);
+            _experienceService!.SaveOrUpdate(experiencia);
             CargarDatos();
         }
 
@@ -73,7 +73,7 @@ namespace MyPortfolioDesktopApp.UserControls
             var confirm = MessageBox.Show("¿Deseas eliminar esta experiencia?", "Confirmar", MessageBoxButtons.YesNo);
             if (confirm == DialogResult.Yes)
             {
-                _service!.Delete(id);
+                _experienceService!.Delete(id);
                 CargarDatos();
             }
         }
@@ -85,7 +85,7 @@ namespace MyPortfolioDesktopApp.UserControls
             var id = dgvExperiences.CurrentRow.Cells[0].Value?.ToString();
             if (id == null) return;
 
-            var exp = _service!.GetByUserId(Session.UserId).FirstOrDefault(x => x.Id == id);
+            var exp = _experienceService!.GetByUserId(Session.UserId).FirstOrDefault(x => x.Id == id);
             if (exp == null) return;
 
             _editingId = exp.Id;

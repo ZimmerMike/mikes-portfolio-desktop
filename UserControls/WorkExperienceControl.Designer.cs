@@ -52,6 +52,7 @@
             groupBox1 = new GroupBox();
             label7 = new Label();
             label5 = new Label();
+            label8 = new Label();
             ((System.ComponentModel.ISupportInitialize)nudStartYear).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudEndYear).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvExperiences).BeginInit();
@@ -71,8 +72,8 @@
             // 
             // btnSave
             // 
-            btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btnSave.Location = new Point(43, 403);
+            btnSave.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnSave.Location = new Point(747, 403);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(100, 29);
             btnSave.TabIndex = 0;
@@ -226,8 +227,8 @@
             // 
             // btnDelete
             // 
-            btnDelete.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btnDelete.Location = new Point(149, 403);
+            btnDelete.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnDelete.Location = new Point(853, 403);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(100, 29);
             btnDelete.TabIndex = 14;
@@ -237,8 +238,8 @@
             // 
             // btnClear
             // 
-            btnClear.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btnClear.Location = new Point(255, 403);
+            btnClear.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnClear.Location = new Point(959, 403);
             btnClear.Name = "btnClear";
             btnClear.Size = new Size(100, 29);
             btnClear.TabIndex = 15;
@@ -279,10 +280,20 @@
             label5.TabIndex = 0;
             label5.Text = "Desde";
             // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(43, 415);
+            label8.Name = "label8";
+            label8.Size = new Size(144, 20);
+            label8.TabIndex = 17;
+            label8.Text = "Empleos registrados";
+            // 
             // WorkExperienceControl
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(label8);
             Controls.Add(groupBox1);
             Controls.Add(btnClear);
             Controls.Add(btnDelete);
@@ -335,5 +346,6 @@
         private DataGridViewTextBoxColumn description;
         private DataGridViewTextBoxColumn startYear;
         private DataGridViewTextBoxColumn endYear;
+        private Label label8;
     }
 }
