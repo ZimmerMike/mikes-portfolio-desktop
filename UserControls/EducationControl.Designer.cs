@@ -161,7 +161,7 @@
             dgvEducation.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvEducation.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvEducation.Columns.AddRange(new DataGridViewColumn[] { Id, Institution, Degree, Field, Start, End });
-            dgvEducation.Location = new Point(43, 392);
+            dgvEducation.Location = new Point(42, 392);
             dgvEducation.Name = "dgvEducation";
             dgvEducation.ReadOnly = true;
             dgvEducation.RowHeadersVisible = false;

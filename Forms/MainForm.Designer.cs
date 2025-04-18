@@ -41,7 +41,7 @@
             EducationTab = new TabPage();
             education1 = new MyPortfolioDesktopApp.UserControls.EducationControl();
             CertificationsTab = new TabPage();
-            certifications1 = new MyPortfolioDesktopApp.UserControls.Certifications();
+            certifications1 = new MyPortfolioDesktopApp.UserControls.CertificationControl();
             tabControlMain.SuspendLayout();
             DashboardTab.SuspendLayout();
             AboutTab.SuspendLayout();
@@ -221,7 +221,7 @@
         private UserControls.AboutMeControl aboutMe1;
         private UserControls.WorkExperienceControl experience1;
         private UserControls.EducationControl education1;
-        private UserControls.Certifications certifications1;
+        private UserControls.CertificationControl certifications1;
         private UserControls.Dashboard dashboard1;
         private UserControls.ProjectControl projects1;
         private UserControls.Dashboard dashboard2;
